@@ -16,9 +16,10 @@ allows certificates to include multiple principals or up to 99 host/DNS names.
 
 # Steps to install
 
- sudo getcert add-ca -c LetsEncrypt -e $(which cerlet)
+ `sudo getcert add-ca -c LetsEncrypt -e $(which cerlet)`
 
 # Steps to set up a development environment on a Fedora box:
+```
 umask 0002
 sudo dnf update -y
 sudo dnf -y install wget git gcc openldap-devel krb5-devel libffi-devel
@@ -33,3 +34,4 @@ virtualenv-3.6 -p python3.6 /home/vagrant/Virtualenv
 source /home/vagrant/Virtualenv/bin/activate
 python setup.py develop
 kinit && cerlet
+```
